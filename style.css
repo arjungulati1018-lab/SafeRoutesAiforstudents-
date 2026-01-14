@@ -1,1 +1,59 @@
+* { box-sizing: border-box; font-family: system-ui; }
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+.hidden { display: none; }
+
+#auth {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#auth input {
+  padding: 10px;
+  margin: 6px;
+  width: 240px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #020617;
+}
+
+#map {
+  height: 60vh;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background: #020617;
+}
+
+#info {
+  padding: 10px;
+  background: #020617;
+}
 

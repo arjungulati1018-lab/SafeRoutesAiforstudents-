@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SafeRoutes AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="auth">
+  <h1>SafeRoutes AI</h1>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="signup()">Create Account</button>
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="app" class="hidden">
+  <header>
+    <span id="userEmail"></span>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <div id="map"></div>
+
+  <div id="controls">
+    <button onclick="locate()">📍 My Location</button>
+    <button onclick="route('foot-walking')">🚶 Walk</button>
+    <button onclick="route('cycling-regular')">🚴 Bike</button>
+    <button onclick="saveRoute()">⭐ Save Route</button>
+    <button onclick="loadWeather()">🌦 Weather</button>
+  </div>
+
+  <div id="info">
+    <div id="weather"></div>
+    <ul id="saved"></ul>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
 

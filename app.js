@@ -68,4 +68,11 @@ window.saveRoute = async () =>
     user: auth.currentUser.uid,
     created: Date.now()
   });
+window.loadWeather = async () => {
+  const r = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=39.25&lon=-76.93&units=imperial&appid=YOUR_WEATHER_KEY`
+  );
+  const d = await r.json();
+  weather.innerHTML = `${d.main.temp}°F — ${d.weather[0].description}`;
+};
 

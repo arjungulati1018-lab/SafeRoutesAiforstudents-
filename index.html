@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SafeRoutes AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeRoutes AI</title>
+<link rel="stylesheet" href="style.css">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-
 <div id="auth">
-  <h1>SafeRoutes AI</h1>
-  <input id="email" placeholder="Email">
-  <input id="password" type="password" placeholder="Password">
-  <button onclick="signup()">Create Account</button>
+  <h2>Login / Sign Up</h2>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="signup()">Sign Up</button>
   <button onclick="login()">Login</button>
 </div>
 
 <div id="app" class="hidden">
-  <header>
+  <div id="top-bar">
     <span id="userEmail"></span>
     <button onclick="logout()">Logout</button>
-  </header>
-
-  <div id="map"></div>
-
+  </div>
   <div id="controls">
     <button onclick="locate()">📍 My Location</button>
-    <button onclick="route('foot-walking')">🚶 Walk</button>
-    <button onclick="route('cycling-regular')">🚴 Bike</button>
-    <button onclick="saveRoute()">⭐ Save Route</button>
-    <button onclick="loadWeather()">🌦 Weather</button>
+    <button onclick="route('foot-walking')">Walk Route</button>
+    <button onclick="route('cycling-regular')">Bike Route</button>
+    <button onclick="saveRoute()">💾 Save Route</button>
+    <button onclick="loadWeather()">🌤 Current Weather</button>
   </div>
-
-  <div id="info">
-    <div id="weather"></div>
-    <ul id="saved"></ul>
-  </div>
+  <div id="weather"></div>
+  <div id="map"></div>
+  <h3>Saved Routes</h3>
+  <ul id="saved"></ul>
 </div>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Firebase and App Scripts -->
 <script type="module" src="firebase.js"></script>
 <script type="module" src="app.js"></script>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>
-
